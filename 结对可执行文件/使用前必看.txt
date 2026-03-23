@@ -1,0 +1,2 @@
+可执行文件在 MathExamSystem\MathExamSystem.exe
+用户的注册信息在MathExamSystem\users.dat

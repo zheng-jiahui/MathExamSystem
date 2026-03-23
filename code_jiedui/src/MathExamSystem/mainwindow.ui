@@ -1,0 +1,1251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>数学考试系统</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+      background: white;
+      font-family: &quot;Microsoft YaHei&quot;, &quot;Segoe UI&quot;, sans-serif;
+  }
+
+  QWidget {
+      background: transparent;
+  }
+
+  QGroupBox {
+      background: white;
+      border: 2px solid #f5a596;
+      border-radius: 20px;
+      margin-top: 15px;
+      padding-top: 20px;
+      font-weight: bold;
+      color: #ce7e73;
+  }
+
+  QGroupBox::title {
+      subcontrol-origin: margin;
+      left: 20px;
+      padding: 0 15px 0 15px;
+      color: #ce7e73;
+      font-size: 18px;
+      font-weight: bold;
+  }
+
+  QLabel {
+      background: transparent;
+      color: #ce7e73;
+      font-size: 16px;
+      font-weight: bold;
+  }
+
+  QLabel#titleLabel {
+      font-size: 36px;
+      font-weight: bold;
+      color: #ce7e73;
+      background: transparent;
+  }
+
+  QLineEdit, QComboBox, QSpinBox {
+      background: white;
+      border: 2px solid #f5a596;
+      border-radius: 12px;
+      padding: 12px;
+      font-size: 16px;
+      selection-background-color: #fad5ce;
+      color: #ce7e73;
+  }
+
+  QLineEdit:focus, QComboBox:focus, QSpinBox:focus {
+      border-color: #ce7e73;
+      background: white;
+      border-width: 3px;
+  }
+
+  QTextEdit {
+      background: white;
+      border: 2px solid #f5a596;
+      border-radius: 12px;
+      padding: 12px;
+      font-size: 16px;
+      color: #ce7e73;
+  }
+
+  QTextEdit:focus {
+      border-color: #ce7e73;
+      border-width: 3px;
+  }
+
+  QPushButton {
+      background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                  stop:0 #f5a596, stop:1 #ce7e73);
+      border: none;
+      border-radius: 12px;
+      color: white;
+      padding: 15px 30px;
+      font-size: 16px;
+      font-weight: bold;
+      min-width: 140px;
+  }
+
+  QPushButton:hover {
+      background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                  stop:0 #f5a596, stop:1 #d88c7d);
+  }
+
+  QPushButton:pressed {
+      background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                  stop:0 #ce7e73, stop:1 #b86a5a);
+  }
+
+  QPushButton:disabled {
+      background: #fad5ce;
+      color: #ce7e73;
+  }
+
+  QRadioButton {
+      background: transparent;
+      color: #ce7e73;
+      font-size: 16px;
+      font-weight: bold;
+      spacing: 10px;
+  }
+
+  QRadioButton::indicator {
+      width: 20px;
+      height: 20px;
+      border-radius: 10px;
+      border: 2px solid #f5a596;
+      background: white;
+  }
+
+  QRadioButton::indicator:checked {
+      background: #ce7e73;
+      border: 2px solid #ce7e73;
+  }
+
+  QRadioButton::indicator:checked:hover {
+      background: #d88c7d;
+      border: 2px solid #d88c7d;
+  }
+
+  QProgressBar {
+      border: 2px solid #f5a596;
+      border-radius: 12px;
+      background: white;
+      text-align: center;
+      color: #ce7e73;
+      font-weight: bold;
+      font-size: 14px;
+  }
+
+  QProgressBar::chunk {
+      background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                                  stop:0 #fad5ce, stop:0.5 #f5a596, stop:1 #ce7e73);
+      border-radius: 10px;
+  }
+
+  QStackedWidget {
+      background: white;
+  }</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <widget class="QWidget" name="loginPage">
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="titleLabel">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Agency FB</family>
+            <pointsize>-1</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>数学考试系统</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="loginGroupBox">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>400</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="title">
+           <string>用户登录</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <widget class="QLabel" name="usernameLabel">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Agency FB</family>
+               <pointsize>-1</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>用户名:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="usernameEdit">
+             <property name="placeholderText">
+              <string>请输入用户名</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="passwordLabel">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>密码:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="passwordEdit">
+             <property name="echoMode">
+              <enum>QLineEdit::Password</enum>
+             </property>
+             <property name="placeholderText">
+              <string>请输入密码</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="loginStatusLabel">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>请登录以开始使用</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="loginButton">
+             <property name="text">
+              <string>登录</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="registerButton">
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    background: transparent;
+    color: #ce7e73;
+    border: 1px solid #ce7e73;
+    padding: 8px 16px;
+}
+
+QPushButton:hover {
+    background: rgba(52, 152, 219, 0.1);
+    color: #f5a596;
+    border-color: #f5a596;
+}</string>
+             </property>
+             <property name="text">
+              <string>没有账号？立即注册</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="registerPage">
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QLabel" name="registerTitleLabel">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Agency FB</family>
+            <pointsize>-1</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>用户注册</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="registerGroupBox">
+          <property name="font">
+           <font>
+            <family>Agency FB</family>
+            <pointsize>14</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="title">
+           <string>注册信息</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <item>
+            <widget class="QLabel" name="emailLabel">
+             <property name="text">
+              <string>邮箱地址:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="emailLayout">
+             <item>
+              <widget class="QLineEdit" name="emailEdit">
+               <property name="placeholderText">
+                <string>请输入有效的邮箱地址</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="sendCodeButton">
+               <property name="text">
+                <string>发送注册码</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QLabel" name="codeLabel">
+             <property name="text">
+              <string>注册码:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="codeEdit">
+             <property name="placeholderText">
+              <string>请输入收到的注册码</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="usernameRegLabel">
+             <property name="text">
+              <string>用户名:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="usernameRegEdit">
+             <property name="placeholderText">
+              <string>请输入用户名</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="regPasswordLabel">
+             <property name="text">
+              <string>密码 (6-10位，含大小写字母和数字):</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="regPasswordEdit">
+             <property name="echoMode">
+              <enum>QLineEdit::Password</enum>
+             </property>
+             <property name="placeholderText">
+              <string>设置登录密码</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="confirmPasswordLabel">
+             <property name="text">
+              <string>确认密码:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="confirmPasswordEdit">
+             <property name="echoMode">
+              <enum>QLineEdit::Password</enum>
+             </property>
+             <property name="placeholderText">
+              <string>再次输入密码</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="userTypeLabel">
+             <property name="text">
+              <string>学习阶段:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="userTypeComboBox">
+             <item>
+              <property name="text">
+               <string>小学</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>初中</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>高中</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="registerStatusLabel">
+             <property name="text">
+              <string>请填写完整的注册信息</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="completeRegisterButton">
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #f5a596, stop:1 #ce7e73);
+}</string>
+             </property>
+             <property name="text">
+              <string>完成注册</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="backToLoginButton">
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    background: transparent;
+    color: #e74c3c;
+    border: 1px solid #e74c3c;
+}
+
+QPushButton:hover {
+    background: rgba(231, 76, 60, 0.1);
+}</string>
+             </property>
+             <property name="text">
+              <string>返回登录</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="mainMenuPage">
+       <layout class="QVBoxLayout" name="verticalLayout_6">
+        <item>
+         <widget class="QLabel" name="welcomeLabel">
+          <property name="font">
+           <font>
+            <family>Agency FB</family>
+            <pointsize>-1</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>欢迎使用数学考试系统</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_5">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>30</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="userInfoGroupBox">
+          <property name="font">
+           <font>
+            <family>Agency FB</family>
+            <pointsize>14</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="title">
+           <string>用户信息</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QLabel" name="currentUserLabel">
+             <property name="font">
+              <font>
+               <family>Agency FB</family>
+               <pointsize>-1</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>用户名: 未登录</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="currentUserTypeLabel">
+             <property name="font">
+              <font>
+               <family>Agency FB</family>
+               <pointsize>-1</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>学习阶段: 未选择</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>30</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="examGroupBox">
+          <property name="font">
+           <font>
+            <family>Agency FB</family>
+            <pointsize>14</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="title">
+           <string>考试功能</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_7">
+           <item>
+            <layout class="QHBoxLayout" name="examSettingsLayout">
+             <item>
+              <widget class="QLabel" name="examTypeLabel">
+               <property name="font">
+                <font>
+                 <family>Agency FB</family>
+                 <pointsize>-1</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>学习阶段:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="examTypeComboBox">
+               <item>
+                <property name="text">
+                 <string>小学</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>初中</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>高中</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="questionCountLabel">
+               <property name="font">
+                <font>
+                 <family>Agency FB</family>
+                 <pointsize>-1</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>题目数量:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="questionCountSpinBox">
+               <property name="font">
+                <font>
+                 <family>Agency FB</family>
+                 <pointsize>-1</pointsize>
+                </font>
+               </property>
+               <property name="minimum">
+                <number>-1000000</number>
+               </property>
+               <property name="maximum">
+                <number>1000000</number>
+               </property>
+               <property name="value">
+                <number>10</number>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QPushButton" name="generateExamButton">
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #fad5ce, stop:1 #f5a596);
+    font-size: 16px;
+    padding: 15px 30px;
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #ce7e73, stop:1 #f5a596);
+}</string>
+             </property>
+             <property name="text">
+              <string>开始考试</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="accountGroupBox">
+          <property name="title">
+           <string>账户管理</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_8">
+           <item>
+            <widget class="QPushButton" name="changePasswordButton">
+             <property name="text">
+              <string>修改密码</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="switchUserTypeButton">
+             <property name="text">
+              <string>切换学习阶段</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="logoutButton">
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #e74c3c, stop:1 #c0392b);
+}</string>
+             </property>
+             <property name="text">
+              <string>退出登录</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_6">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>30</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="examPage">
+       <layout class="QVBoxLayout" name="verticalLayout_9">
+        <item>
+         <widget class="QLabel" name="examTitleLabel">
+          <property name="text">
+           <string>在线考试</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="progressLabel">
+          <property name="text">
+           <string>第 1 题 / 共 10 题</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QProgressBar" name="progressBar">
+          <property name="value">
+           <number>24</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="questionGroupBox">
+          <property name="title">
+           <string>题目</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_10">
+           <item>
+            <widget class="QTextEdit" name="questionTextEdit">
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+             <property name="html">
+              <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'SimSun'; font-size:16px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Microsoft YaHei'; font-size:14pt;&quot;&gt;请等待题目加载...&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="optionsGroupBox">
+          <property name="title">
+           <string>请选择答案</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout">
+           <item row="0" column="0">
+            <widget class="QRadioButton" name="optionARadio">
+             <property name="text">
+              <string>A</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLabel" name="optionALabel">
+             <property name="text">
+              <string>选项A内容</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QRadioButton" name="optionBRadio">
+             <property name="text">
+              <string>B</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLabel" name="optionBLabel">
+             <property name="text">
+              <string>选项B内容</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QRadioButton" name="optionCRadio">
+             <property name="text">
+              <string>C</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLabel" name="optionCLabel">
+             <property name="text">
+              <string>选项C内容</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QRadioButton" name="optionDRadio">
+             <property name="text">
+              <string>D</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLabel" name="optionDLabel">
+             <property name="text">
+              <string>选项D内容</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="examButtonsLayout">
+          <item>
+           <widget class="QPushButton" name="prevQuestionButton">
+            <property name="text">
+             <string>上一题</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="submitAnswerButton">
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #f5a596, stop:1 #ce7e73);
+}</string>
+            </property>
+            <property name="text">
+             <string>提交答案</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="nextQuestionButton">
+            <property name="text">
+             <string>下一题</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="submitExamButton">
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #f5a596, stop:1 #ce7e73);
+    font-size: 16px;
+    padding: 12px 30px;
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #ce7e73, stop:1 #feb4d5);
+}</string>
+            </property>
+            <property name="text">
+             <string>提交试卷</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_7">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="changePasswordPage">
+       <layout class="QVBoxLayout" name="verticalLayout_11">
+        <item>
+         <widget class="QLabel" name="changePasswordTitleLabel">
+          <property name="text">
+           <string>修改密码</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_8">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="passwordGroupBox">
+          <property name="title">
+           <string>密码修改</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_12">
+           <item>
+            <widget class="QLabel" name="oldPasswordLabel">
+             <property name="text">
+              <string>原密码:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="oldPasswordEdit">
+             <property name="echoMode">
+              <enum>QLineEdit::Password</enum>
+             </property>
+             <property name="placeholderText">
+              <string>请输入原密码</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="newPasswordLabel">
+             <property name="text">
+              <string>新密码 (6-10位，含大小写字母和数字):</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="newPasswordEdit">
+             <property name="echoMode">
+              <enum>QLineEdit::Password</enum>
+             </property>
+             <property name="placeholderText">
+              <string>请输入新密码</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="confirmNewPasswordLabel">
+             <property name="text">
+              <string>确认新密码:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="confirmNewPasswordEdit">
+             <property name="echoMode">
+              <enum>QLineEdit::Password</enum>
+             </property>
+             <property name="placeholderText">
+              <string>请再次输入新密码</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="passwordStatusLabel">
+             <property name="text">
+              <string>请填写密码信息</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="confirmChangePasswordButton">
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #f5a596, stop:1 #ce7e73);
+}</string>
+             </property>
+             <property name="text">
+              <string>确认修改</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="backToMainFromPasswordButton">
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    background: transparent;
+    color: #e74c3c;
+    border: 1px solid #e74c3c;
+}
+
+QPushButton:hover {
+    background: rgba(231, 76, 60, 0.1);
+}</string>
+             </property>
+             <property name="text">
+              <string>返回主菜单</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_9">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="resultPage">
+       <layout class="QVBoxLayout" name="verticalLayout_13">
+        <item>
+         <widget class="QLabel" name="resultTitleLabel">
+          <property name="text">
+           <string>考试结果</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_10">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="resultGroupBox">
+          <property name="font">
+           <font>
+            <family>Agency FB</family>
+            <pointsize>14</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="title">
+           <string>成绩统计</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="0" column="0">
+            <widget class="QLabel" name="totalQuestionsLabel">
+             <property name="text">
+              <string>总题数:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLabel" name="totalQuestionsValue">
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="correctAnswersLabel">
+             <property name="text">
+              <string>正确题数:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLabel" name="correctAnswersValue">
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="scoreLabel">
+             <property name="text">
+              <string>得分:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLabel" name="scoreValue">
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="resultUserTypeLabel">
+             <property name="text">
+              <string>学习阶段:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLabel" name="resultUserTypeValue">
+             <property name="text">
+              <string>小学</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="congratsLabel">
+          <property name="text">
+           <string>恭喜完成考试！</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="resultButtonsLayout">
+          <item>
+           <widget class="QPushButton" name="viewDetailsButton">
+            <property name="text">
+             <string>查看详情</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="newExamButton">
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #feb4d5, stop:1 #27ae60);
+}</string>
+            </property>
+            <property name="text">
+             <string>新的考试</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="backToMenuButton">
+            <property name="text">
+             <string>返回主菜单</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_11">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
